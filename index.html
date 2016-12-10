@@ -1,0 +1,108 @@
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Bookmarks</title>
+		<link rel="icon" type="image/png" href="pictures/greysquare.ico" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<script src="js/jquery-3.1.0.min.js"></script>
+		<script src="js/scrolloverflow.min.js"></script>
+		<script src="js/jquery.fullpage.extensions.min.js"></script>
+		<script src="js/jquery.fullPage.js"></script>
+	</head>
+	<body>
+		<script>
+			$(document).ready(function() {
+    		$('#fullpage').fullpage({
+    		  scrollHorizontally: true,
+					fitToSection: false,
+    		})
+			});
+			$(function(){
+				// On all sections
+				$("#main").load("categories/main/main.html");
+
+				// Index
+				$("#index-test").load("categories/index/test.html");
+				$("#index-test2").load("categories/index/test2.html");
+				$("#index-test3").load("categories/index/test.html");
+				$("#index-test4").load("categories/index/test.html");
+				$("#index-test5").load("categories/index/test.html");
+				$("#index-test6").load("categories/index/test.html");
+				$("#index-test7").load("categories/index/test.html");
+
+				// Dev
+				$("#links").load("categories/dev/links.html");
+				$("#bash").load("categories/dev/bash.html");
+				$("#web").load("categories/dev/web.html");
+				$("#doc").load("categories/dev/doc.html");
+			})
+		</script>
+
+		<div id="main_container">
+
+			<div id="main"></div>
+
+
+			<div id="fullpage" class="fullpage-wrapper">
+				<div class="section">
+
+
+					<div class="slide">
+						<div class="content">
+							<div class="bloc">
+								<div>
+									<div>
+										<div>
+											<div class="box" id="index-test"></div>
+											<div class="box" id="index-test2"></div>
+										</div>
+										<div>
+											<div class="box" id="index-test3"></div>
+										</div>
+									</div>
+									<div>
+										<div>
+											<div class="box-invisible" id="index-test4"></div>
+											<div class="box" id="index-test5"></div>
+										</div>
+										<div>
+											<div class="box" id="index-test6"></div>
+											<div class="box-invisible" id="index-test7"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="slide">
+						<div class="content">
+							<div class="bloc">
+								<div>
+									<div>
+										<div>
+											<div class="box" id="links"></div>
+											<div class="box-invisible" id="bash"></div>
+										</div>
+										<div>
+											<div class="box" id="doc"></div>
+											<div class="box" id="web"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+
+			<div style="display:block;clear:left;"></div>
+			<script src="js/display_hide.js"></script>
+		</div>
+	</body>
+</html>

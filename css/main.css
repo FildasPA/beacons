@@ -1,0 +1,248 @@
+/*****************/
+/* BOOKMARKS CSS */
+/*****************/
+
+/********/
+/* Main */
+/********/
+
+body {
+	background-color: #424242;
+	font-family: 'Consolas';
+	padding-bottom: 40px;
+	margin: 0px;
+}
+
+body a {
+	text-decoration: none;
+	color: #2A2A2A;
+	display: block;
+}
+
+#main_container {
+	margin: 0px auto 40px 0px;
+}
+
+#main_container div {
+	vertical-align: top;
+}
+
+#main {
+	margin-bottom: 10px;
+}
+
+.content {
+	height: calc(100% - 160px);
+	overflow:auto;
+}
+
+/***************************/
+/* Bloc (responsive table) */
+/***************************/
+
+.bloc {
+	display: table;
+	table-layout: fixed;
+	margin-left: 35px;
+}
+
+.bloc > div {
+	display: table-cell;
+}
+
+.bloc > div > div {
+	display: table-cell;
+}
+
+.bloc > div > div > div {
+	padding:0 10px 0 10px;
+	display: table-cell;
+	vertical-align: top;
+	width: 500px;
+}
+
+.bloc > div > div > div > div {
+	width: 500px;
+}
+
+
+/*********************/
+/* Min-width: 1550px */
+/*********************/
+@media screen and (min-width:1550px) {
+	.bloc > div > div:nth-child(2) {
+		padding-left: 10px;
+	}
+	.bloc > div > div:nth-child(2) > div {
+		display: table-row;
+	}
+}
+
+/*********************/
+/* Max-width: 1550px */
+/*********************/
+
+@media screen and (max-width:1550px) {
+	.bloc > div {
+		display: table;
+		max-width: 500px;
+	}
+	.bloc > div > div {
+		display: table-row;
+	}
+	.bloc > div > div > div {
+		display: table-cell;
+	}
+}
+
+/********************/
+/* Max-width: 950px */
+/********************/
+@media screen and (max-width:950px) {
+	.bloc > div {
+		display: table;
+		padding:10px;
+	}
+	.bloc > div > div > div {
+		display: table-row;
+	}
+}
+
+/********************/
+/* Max-width: 550px */
+/********************/
+@media screen and (max-width:550px) {
+	#main_container {
+		margin: 20px auto 40px 0px;
+	}
+	#speedboxes {
+		margin: 0px;
+	}
+	.speedbox {
+		margin-left:0px;
+	}
+}
+
+
+/*******/
+/* Box */
+/*******/
+
+.box, .box-invisible {
+	background-color: #FFF;
+	margin-bottom: 27px;
+	cursor:  pointer;
+	width: 100%;
+	display: inline-block;
+}
+
+
+.box-invisible .bookmark, .box-invisible div {
+	display: none !important;
+}
+
+.box h2, .box-invisible h2 {
+	font-size: 0.813em;
+	padding: 5px 8px 5px 10px;
+	margin: 0px;
+	font-family: 'Hack';
+}
+
+.box .bookmark:hover, .box h2:hover, .box-invisible:hover {
+	transition: background-color 0.7s;
+	-webkit-transition: background-color 0.7s;
+	background-color: #dddddd;
+}
+
+.box .bookmark {
+	font-size: 0.813em;
+	margin: 0;
+	width: 100%;
+}
+
+.box .bookmark div {
+	display: inline-block;
+}
+
+.box .bookmark a {
+	border-top: 1px solid #e6e6e6;
+	padding: 5px 8px 5px 10px;
+}
+
+/************/
+/* Speedbox */
+/************/
+
+#speedboxes {
+	margin-top: 27px;
+	margin-left: 45px;
+	display: block;
+}
+
+.speedbox {
+	background-color: #FFF;
+	margin: 0 15px 27px 0px;
+	padding: 6px 10px 0px 10px;
+	display: inline-block;
+	width: auto !important;
+}
+
+.speedbox .bookmark {
+	display: inline-block;
+	clear: both;
+}
+
+.speedbox h2, .speedbox .bookmark div {
+	display: none;
+}
+
+/*************/
+/* Bookmarks */
+/*************/
+
+.bookmark img {
+	width: 16px;
+	height: 16px;
+	position: relative;
+  bottom: 1px;
+  margin-right: 3px;
+  vertical-align: bottom;
+}
+
+.bookmark div, .bookmark .url {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.bookmark div {
+	max-width: 40%;
+}
+
+.bookmark .url {
+	float: right;
+	color: grey;
+	max-width: 50%;
+}
+
+/********************/
+/* Fullpages arrows */
+/********************/
+
+#fullpage {
+	margin: 0px auto 0 auto;
+}
+
+.fp-controlArrow {
+	top: 40%;
+}
+
+.fp-controlArrow.fp-prev {
+	border-width: 12px 12px 12px 0;
+	border-color: transparent #FFF transparent transparent;
+}
+
+.fp-controlArrow.fp-next {
+	border-width: 12px 0 12px 12px;
+	border-color: transparent transparent transparent #FFF;
+}
